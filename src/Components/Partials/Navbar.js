@@ -25,7 +25,7 @@ function TopNav({logoutHandler}) {
             <Nav.Link as={Link} 
             to='/'>Home</Nav.Link>
             <Nav.Link as={Link} 
-            to='/event'>Upcoming Event</Nav.Link>
+            to='/event'>All Event</Nav.Link>
             
             {
             JSON.parse(localStorage.getItem('userData'))?.isAdmin ?
@@ -76,7 +76,7 @@ function TopNav({logoutHandler}) {
               localStorage.hasOwnProperty('token') && localStorage.hasOwnProperty('userData') ?
               <>
                 <Nav.Link as={Link} 
-                to='/event'>Upcoming Event</Nav.Link>
+                to='/event'>All Event</Nav.Link>
                 
                 {
                 JSON.parse(localStorage.getItem('userData'))?.isAdmin ?
