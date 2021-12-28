@@ -131,7 +131,14 @@ function Home() {
         key={event._id}>
           <div className="ms-2 mt-2 me-auto d-flex justify-content-between">
             <h5 className="fw-bold text-d">
-              {event.eventName}
+              {
+                localStorage.hasOwnProperty('token') && localStorage.hasOwnProperty('userData') ?
+                <Link className='link2'
+                to={`/event/${event._id}`}>
+                  {event.eventName}
+                </Link>
+                : event.eventName
+              }
             </h5>
             <h5>
               <Badge className='ms-2 bg' 
