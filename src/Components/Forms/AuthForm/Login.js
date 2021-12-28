@@ -37,7 +37,7 @@ function Login({loginHandler}) {
     .then(data => {
       Swal.fire({
         icon: 'success',
-        title: 'Login Successfully',
+        title: data.msg,
         showConfirmButton: false,
         timer: 1500
       })
