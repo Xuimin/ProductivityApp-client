@@ -36,7 +36,11 @@ function AddPlans({setShow, getPlans}) {
     })
     .then(res => res.json())
     .then(data => {
-      Swal.fire(data.msg)
+      Swal.fire({
+        title: data.msg,  
+        icon: 'success',
+        confirmButtonColor: '#b27092'
+      })
       setShow(false)
       getPlans()
     })

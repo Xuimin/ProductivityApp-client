@@ -77,8 +77,8 @@ function Home() {
       'text': "You won't be able to revert this!",
       'icon': 'warning',
       'showCancelButton': true,
-      'confirmButtonColor': '#3085d6',
-      'cancelButtonColor': '#d33',
+      'confirmButtonColor': '#b27092',
+      'cancelButtonColor': '#512d38',
       'confirmButtonText': 'Yes, delete it!'
   }).then(result => {
       if(result.isConfirmed) {
@@ -90,7 +90,12 @@ function Home() {
         })
         .then(res => res.json())
         .then(data => {
-          Swal.fire('Deleted', data.msg, 'success')
+          Swal.fire({
+            title: 'Deleted', 
+            text: data.msg, 
+            icon: 'success',
+            confirmButtonColor: '#b27092'
+          })
           getPlans()
         })
       }
@@ -108,9 +113,13 @@ function Home() {
         <Card.Body>
           <Card.Title className='d-inline text'>{event.eventName} </Card.Title>
           <small>
+            {
+            localStorage.hasOwnProperty('token') && localStorage.hasOwnProperty('userData') ?
             <Link to={`/event/${event._id}`} className='link'>
               [See Details]<i className='bi-arrow-right-circle ms-1'></i>
             </Link>
+            : null
+            }
           </small>
         </Card.Body>
       </Card>

@@ -34,7 +34,11 @@ function Register() {
       if(data.errors) {
         Swal.fire(JSON.stringify(data.errors))
       } else {
-        Swal.fire(data.msg)
+        Swal.fire({
+          title: data.msg,  
+          icon: 'success',
+          confirmButtonColor: '#b27092'
+        })
         navigate('/')
       }
     })

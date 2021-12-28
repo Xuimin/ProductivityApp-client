@@ -45,7 +45,11 @@ function TopNav({logoutHandler}) {
             to='/feedback'>Feedback</Nav.Link>
             <Nav.Link onClick={() => {
               logoutHandler()
-              Swal.fire('Logout Successfully')
+              Swal.fire({
+                title: 'Logged Out Successfully',  
+                icon: 'success',
+                confirmButtonColor: '#b27092'
+              })
             navigate('/')
             }}>Logout</Nav.Link>
           </>
@@ -93,7 +97,11 @@ function TopNav({logoutHandler}) {
                 to='/feedback'>Feedback</Nav.Link>
                 <Nav.Link onClick={() => {
                   logoutHandler()
-                  Swal.fire('Logout Successfully')
+                  Swal.fire({
+                    title: 'Logged Out Successfully',  
+                    icon: 'success',
+                    confirmButtonColor: '#b27092'
+                  })
                   navigate('/')
                 }}>Logout</Nav.Link>
 

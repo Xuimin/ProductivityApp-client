@@ -48,7 +48,6 @@ function Login({loginHandler}) {
   }
 
   const onLoginSuccess = (res) => {
-    loginHandler(res.tokenId)
     Swal.fire({
       icon: 'success',
       title: 'Login Successfully',
