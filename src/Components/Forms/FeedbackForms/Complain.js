@@ -137,7 +137,7 @@ function Complain() {
           <Form.Label>Your Complains</Form.Label>
           <Form.Control as='textarea' 
           name='feedbackDes' 
-          placeholder='Please input your comments here.' 
+          placeholder='Please input your complain here.' 
           onChange={onChangeHandler} 
           required />
         </Form.Group>
