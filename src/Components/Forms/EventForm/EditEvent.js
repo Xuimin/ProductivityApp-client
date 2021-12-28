@@ -139,6 +139,7 @@ function EditEvent({events, setShow, id}) {
             <Form.Control type='time' 
             name='timeEnd' 
             placeholder='Event Time End' 
+            min={event.timeStart} 
             onChange={onChangeHandler} />
           </FloatingLabel>
         </Col>

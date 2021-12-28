@@ -129,7 +129,8 @@ function AddEvent({getEvents, setShow}) {
           className='mb-3'>
             <Form.Control type='time' 
             name='timeEnd' 
-            placeholder='Event Time End' 
+            placeholder='Event Time End'
+            min={event.timeStart} 
             onChange={onChangeHandler} 
             required />
           </FloatingLabel>
