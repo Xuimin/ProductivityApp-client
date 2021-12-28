@@ -91,7 +91,7 @@ function Event() {
 
   return (
     <Container className='min'>
-      <h2 className='text-center text-d'>Upcoming Events
+      <h2 className='text-center text-d'>All Events
       {
         JSON.parse(localStorage.getItem('userData')).isAdmin ?
         <i className='bi-patch-plus md cursor ms-3' 
