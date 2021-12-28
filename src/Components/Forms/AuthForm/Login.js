@@ -82,7 +82,7 @@ function Login({loginHandler}) {
 
   return (
     <Container className='min'>
-      <Card className='md-width mx-auto'>
+      <Card className='col-lg-6 mx-auto'>
         <Card.Body>
           <Card.Title>
             <h2 className='text text-center my-4'>

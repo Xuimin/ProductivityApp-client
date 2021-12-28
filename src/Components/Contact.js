@@ -8,7 +8,7 @@ function Contact() {
   return (
     <Container className='min'>
       <h2 className='my-5 text-center text'>Let's keep in touch! <i className='bi-emoji-heart-eyes'></i></h2>
-      <Card className='md-width mx-auto'>
+      <Card className='col-md-6 mx-auto'>
         <Card.Body>
           <Card.Title className='text-d my-2 text-center'>Contact Us</Card.Title>
           <Card.Subtitle className='text text-center mt-4 px-4'>Good day, we hope you are having a blast on this website. Wanna get to know us more? Follow us on... </Card.Subtitle>
