@@ -138,7 +138,7 @@ function Habit_Goals() {
               data={gh} 
               setEditing1={setEditing1} />
               : null
-              }
+              } 
               <a data-type="countdown"
                 data-name="Time left:"
                 data-bg_color="#fce0ee"

@@ -12,7 +12,6 @@ import { GoogleLogin } from 'react-google-login'
 
 function Login({loginHandler}) {
   const [ user, setUser ] = useState({})
-  const clientId = '511679159025-ufrrp2o8nelsacpediciqustdjvj9am1.apps.googleusercontent.com'
 
   const navigate = useNavigate()
 
@@ -48,12 +47,12 @@ function Login({loginHandler}) {
   }
 
   const onLoginSuccess = (res) => {
-    Swal.fire({
-      icon: 'success',
-      title: 'Login Successfully',
-      showConfirmButton: false,
-      timer: 1500
-    })
+    // Swal.fire({
+    //   icon: 'success',
+    //   title: 'Login Successfully',
+    //   showConfirmButton: false,
+    //   timer: 1500
+    // })
     fetch(`${process.env.REACT_APP_API_URL}/auth/googleLogin`, {
       method: "POST",
       headers: {
@@ -121,7 +120,7 @@ function Login({loginHandler}) {
               <p>Or</p>
               
               <GoogleLogin
-              clientId={clientId}
+              clientId={process.env.CLIENT_ID}
               buttonText="Login With Google"
               onSuccess={onLoginSuccess}
               onFailure={onFailureSuccess}
